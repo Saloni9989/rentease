@@ -1,0 +1,87 @@
+.rental-detail-page { padding: 2rem 0 4rem; }
+
+.rental-detail-header { margin-bottom: 2rem; }
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: block;
+}
+.back-btn:hover { text-decoration: underline; }
+
+.rental-detail-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rental-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.rental-detail-left, .rental-detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.detail-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.detail-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.rental-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.rental-detail-item:last-child { border-bottom: none; }
+.rental-detail-item-info h3 { font-size: 0.9rem; font-weight: 600; color: var(--gray-800); }
+.rental-detail-item-info p { font-size: 0.8rem; color: var(--gray-500); margin-top: 0.2rem; }
+.rental-detail-item-price { text-align: right; }
+.item-total { font-size: 0.95rem; font-weight: 700; color: var(--gray-900); }
+.item-deposit { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.2rem; }
+
+.address-block { font-size: 0.9rem; color: var(--gray-700); line-height: 1.7; }
+
+.notes-text { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
+.admin-notes-card { background: #fffbeb; border: 1px solid #fde68a; }
+
+.summary-rows { display: flex; flex-direction: column; gap: 0.5rem; }
+.summary-row { display: flex; justify-content: space-between; font-size: 0.875rem; color: var(--gray-600); }
+.summary-divider { height: 1px; background: var(--gray-200); margin: 0.875rem 0; }
+.summary-total { display: flex; justify-content: space-between; font-size: 1rem; font-weight: 700; color: var(--gray-900); }
+
+.rental-actions { display: flex; flex-direction: column; gap: 0.75rem; }
+.extend-form {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+}
+
+@media (max-width: 900px) {
+  .rental-detail-grid { grid-template-columns: 1fr; }
+}

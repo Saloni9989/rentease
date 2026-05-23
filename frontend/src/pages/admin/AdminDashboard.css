@@ -1,0 +1,120 @@
+.admin-dashboard {}
+
+.admin-page-header { margin-bottom: 1.75rem; }
+.admin-page-title { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); }
+.admin-page-subtitle { color: var(--gray-500); font-size: 0.875rem; margin-top: 0.25rem; }
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  text-decoration: none;
+  border-left: 4px solid transparent;
+}
+.stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.stat-card-success { border-left-color: var(--success); }
+.stat-card-primary { border-left-color: var(--primary); }
+.stat-card-info { border-left-color: var(--info); }
+.stat-card-warning { border-left-color: var(--warning); }
+.stat-card-danger { border-left-color: var(--danger); }
+
+.stat-card-icon { font-size: 2rem; flex-shrink: 0; }
+.stat-card-value { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); }
+.stat-card-label { font-size: 0.8rem; color: var(--gray-500); margin-top: 0.1rem; }
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.dashboard-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.dashboard-card-header h2 { font-size: 1rem; font-weight: 700; color: var(--gray-800); }
+.view-all-link { font-size: 0.8rem; color: var(--primary); font-weight: 500; }
+.view-all-link:hover { text-decoration: underline; }
+
+/* Recent Rentals */
+.recent-rentals { display: flex; flex-direction: column; gap: 0.75rem; }
+.recent-rental-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--gray-50);
+}
+.recent-rental-row:last-child { border-bottom: none; }
+.recent-rental-id { font-size: 0.8rem; font-weight: 700; color: var(--gray-700); font-family: monospace; }
+.recent-rental-user { font-size: 0.75rem; color: var(--gray-500); margin-top: 0.1rem; }
+.recent-rental-meta { display: flex; align-items: center; gap: 0.75rem; }
+.recent-rental-amount { font-size: 0.8rem; font-weight: 600; color: var(--gray-700); }
+
+/* Status Breakdown */
+.status-breakdown { display: flex; flex-direction: column; gap: 0.75rem; }
+.status-row { display: flex; align-items: center; gap: 0.75rem; }
+.status-row-left { min-width: 120px; }
+.status-bar-wrap { flex: 1; height: 8px; background: var(--gray-100); border-radius: 4px; overflow: hidden; }
+.status-bar { height: 100%; background: var(--primary); border-radius: 4px; transition: width 0.5s ease; }
+.status-count { font-size: 0.8rem; font-weight: 600; color: var(--gray-600); min-width: 24px; text-align: right; }
+
+/* Quick Actions */
+.quick-actions-title { font-size: 1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1rem; }
+.quick-actions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.quick-action-btn {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  text-decoration: none;
+  border: 1.5px solid var(--gray-200);
+}
+.quick-action-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+.quick-action-btn span { font-size: 1.25rem; }
+
+.no-data { font-size: 0.875rem; color: var(--gray-400); text-align: center; padding: 1rem; }
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .quick-actions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,58 @@
+.maintenance-page { padding: 2rem 0 4rem; }
+
+.maintenance-form-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+.form-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1.5rem; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-actions { display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.5rem; }
+
+.maintenance-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.maintenance-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.maintenance-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.875rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.maintenance-product { font-size: 1rem; font-weight: 600; color: var(--gray-800); }
+.maintenance-meta { font-size: 0.8rem; color: var(--gray-500); margin-top: 0.2rem; text-transform: capitalize; }
+.maintenance-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.maintenance-desc { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
+.technician-notes {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f0fdf4;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  color: var(--gray-700);
+  border-left: 3px solid var(--success);
+}
+.scheduled-date { font-size: 0.8rem; color: var(--primary); margin-top: 0.5rem; font-weight: 500; }
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.empty-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.empty-state h3 { font-size: 1.25rem; font-weight: 600; color: var(--gray-700); margin-bottom: 0.5rem; }
+.empty-state p { color: var(--gray-500); }
+
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}
