@@ -4,6 +4,26 @@ import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import './ProfilePage.css';
 
+const CITIES = ['Mumbai', 'Pune', 'Bangalore', 'Delhi', 'Hyderabad', 'Chennai'];
+
+const CITY_STATE_MAP = {
+  'Mumbai':    'Maharashtra',
+  'Pune':      'Maharashtra',
+  'Bangalore': 'Karnataka',
+  'Delhi':     'Delhi',
+  'Hyderabad': 'Telangana',
+  'Chennai':   'Tamil Nadu',
+};
+
+const ALL_STATES = [
+  'Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh',
+  'Delhi','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand',
+  'Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur',
+  'Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan',
+  'Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh',
+  'Uttarakhand','West Bengal',
+];
+
 export default function ProfilePage() {
   const { user, updateUser } = useAuth();
   const [tab, setTab] = useState('profile');
@@ -139,13 +159,22 @@ export default function ProfilePage() {
                   <div className="form-row-3">
                     <div className="form-group">
                       <label className="form-label">City</label>
-                      <input type="text" className="form-control" value={profile.city}
-                        onChange={(e) => setProfile({ ...profile, city: e.target.value })} />
+                      <select className="form-control" value={profile.city}
+                        onChange={(e) => {
+                          const city = e.target.value;
+                          setProfile({ ...profile, city, state: CITY_STATE_MAP[city] || profile.state });
+                        }}>
+                        <option value="">Select City</option>
+                        {CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                      </select>
                     </div>
                     <div className="form-group">
                       <label className="form-label">State</label>
-                      <input type="text" className="form-control" value={profile.state}
-                        onChange={(e) => setProfile({ ...profile, state: e.target.value })} />
+                      <select className="form-control" value={profile.state}
+                        onChange={(e) => setProfile({ ...profile, state: e.target.value })}>
+                        <option value="">Select State</option>
+                        {ALL_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+                      </select>
                     </div>
                     <div className="form-group">
                       <label className="form-label">Pincode</label>

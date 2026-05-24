@@ -4,6 +4,15 @@ import { toast } from 'react-toastify';
 import { useAuth } from '../context/AuthContext';
 import './AuthPages.css';
 
+const CITY_STATE_MAP = {
+  'Mumbai':    'Maharashtra',
+  'Pune':      'Maharashtra',
+  'Bangalore': 'Karnataka',
+  'Delhi':     'Delhi',
+  'Hyderabad': 'Telangana',
+  'Chennai':   'Tamil Nadu',
+};
+
 export default function RegisterPage() {
   const { register } = useAuth();
   const navigate = useNavigate();
@@ -100,17 +109,25 @@ export default function RegisterPage() {
             <div className="form-row">
               <div className="form-group">
                 <label className="form-label">City</label>
-                <select className="form-control" value={form.city} onChange={set('city')}>
+                <select className="form-control" value={form.city}
+                  onChange={(e) => {
+                    const city = e.target.value;
+                    setForm({ ...form, city, state: CITY_STATE_MAP[city] || '' });
+                  }}>
                   <option value="">Select City</option>
-                  {['Mumbai', 'Pune', 'Bangalore', 'Delhi', 'Hyderabad', 'Chennai'].map((c) => (
+                  {Object.keys(CITY_STATE_MAP).map((c) => (
                     <option key={c} value={c}>{c}</option>
                   ))}
                 </select>
               </div>
               <div className="form-group">
                 <label className="form-label">State</label>
-                <input type="text" className="form-control"
-                  placeholder="Maharashtra" value={form.state} onChange={set('state')} />
+                <select className="form-control" value={form.state} onChange={set('state')}>
+                  <option value="">Select State</option>
+                  {['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Delhi','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal'].map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
               </div>
             </div>
 

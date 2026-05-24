@@ -8,6 +8,24 @@ import './CheckoutPage.css';
 
 const CITIES = ['Mumbai', 'Pune', 'Bangalore', 'Delhi', 'Hyderabad', 'Chennai'];
 
+const CITY_STATE_MAP = {
+  'Mumbai':    'Maharashtra',
+  'Pune':      'Maharashtra',
+  'Bangalore': 'Karnataka',
+  'Delhi':     'Delhi',
+  'Hyderabad': 'Telangana',
+  'Chennai':   'Tamil Nadu',
+};
+
+const ALL_STATES = [
+  'Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh',
+  'Delhi','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand',
+  'Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur',
+  'Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan',
+  'Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh',
+  'Uttarakhand','West Bengal',
+];
+
 // Get min delivery date (tomorrow)
 const getMinDate = () => {
   const d = new Date();
@@ -103,7 +121,12 @@ export default function CheckoutPage() {
               <div className="form-row-3">
                 <div className="form-group">
                   <label className="form-label">City *</label>
-                  <select className={`form-control ${errors.city ? 'error' : ''}`} value={form.city} onChange={set('city')}>
+                  <select className={`form-control ${errors.city ? 'error' : ''}`}
+                    value={form.city}
+                    onChange={(e) => {
+                      const city = e.target.value;
+                      setForm({ ...form, city, state: CITY_STATE_MAP[city] || form.state });
+                    }}>
                     <option value="">Select City</option>
                     {CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
                   </select>
@@ -111,8 +134,11 @@ export default function CheckoutPage() {
                 </div>
                 <div className="form-group">
                   <label className="form-label">State *</label>
-                  <input type="text" className={`form-control ${errors.state ? 'error' : ''}`}
-                    placeholder="Maharashtra" value={form.state} onChange={set('state')} />
+                  <select className={`form-control ${errors.state ? 'error' : ''}`}
+                    value={form.state} onChange={set('state')}>
+                    <option value="">Select State</option>
+                    {ALL_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+                  </select>
                   {errors.state && <p className="form-error">{errors.state}</p>}
                 </div>
                 <div className="form-group">
