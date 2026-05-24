@@ -19,7 +19,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Bed',
     brand: 'Nilkamal',
-    images: ['https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600',
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600',
+      'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600',
+    ],
     securityDeposit: 999,
     tenureOptions: [
       { months: 3,  monthlyRent: 599 },
@@ -37,7 +41,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Bed',
     brand: 'Durian',
-    images: ['https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600',
+      'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600',
+    ],
     securityDeposit: 499,
     tenureOptions: [
       { months: 3,  monthlyRent: 299 },
@@ -55,7 +63,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Sofa',
     brand: 'Urban Ladder',
-    images: ['https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+      'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600',
+      'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600',
+    ],
     securityDeposit: 799,
     tenureOptions: [
       { months: 3,  monthlyRent: 449 },
@@ -73,7 +85,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Sofa',
     brand: 'Pepperfry',
-    images: ['https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600',
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600',
+      'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600',
+    ],
     securityDeposit: 1499,
     tenureOptions: [
       { months: 3,  monthlyRent: 799 },
@@ -91,7 +107,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Table',
     brand: 'Godrej Interio',
-    images: ['https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=600',
+      'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600',
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600',
+    ],
     securityDeposit: 299,
     tenureOptions: [
       { months: 3,  monthlyRent: 149 },
@@ -109,7 +129,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Table',
     brand: 'Nilkamal',
-    images: ['https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600',
+      'https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=600',
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600',
+    ],
     securityDeposit: 799,
     tenureOptions: [
       { months: 3,  monthlyRent: 449 },
@@ -127,7 +151,11 @@ const products = [
     category: 'Furniture',
     subCategory: 'Wardrobe',
     brand: 'Godrej Interio',
-    images: ['https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+    ],
     securityDeposit: 699,
     tenureOptions: [
       { months: 3,  monthlyRent: 349 },
@@ -147,7 +175,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'Refrigerator',
     brand: 'LG',
-    images: ['https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600',
+      'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+    ],
     securityDeposit: 1499,
     tenureOptions: [
       { months: 3,  monthlyRent: 699 },
@@ -165,7 +197,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'Refrigerator',
     brand: 'Samsung',
-    images: ['https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600',
+      'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+    ],
     securityDeposit: 799,
     tenureOptions: [
       { months: 3,  monthlyRent: 349 },
@@ -183,7 +219,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'Washing Machine',
     brand: 'Bosch',
-    images: ['https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600',
+      'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600',
+      'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600',
+    ],
     securityDeposit: 1299,
     tenureOptions: [
       { months: 3,  monthlyRent: 599 },
@@ -201,7 +241,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'Washing Machine',
     brand: 'Whirlpool',
-    images: ['https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600',
+      'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600',
+      'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=600',
+    ],
     securityDeposit: 699,
     tenureOptions: [
       { months: 3,  monthlyRent: 299 },
@@ -219,7 +263,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'TV',
     brand: 'Sony',
-    images: ['https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600',
+      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600',
+      'https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?w=600',
+    ],
     securityDeposit: 1299,
     tenureOptions: [
       { months: 3,  monthlyRent: 649 },
@@ -237,7 +285,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'TV',
     brand: 'Mi',
-    images: ['https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600',
+      'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600',
+      'https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?w=600',
+    ],
     securityDeposit: 699,
     tenureOptions: [
       { months: 3,  monthlyRent: 299 },
@@ -255,7 +307,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'AC',
     brand: 'Daikin',
-    images: ['https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+    ],
     securityDeposit: 1499,
     tenureOptions: [
       { months: 3,  monthlyRent: 799 },
@@ -273,7 +329,11 @@ const products = [
     category: 'Appliances',
     subCategory: 'Microwave',
     brand: 'IFB',
-    images: ['https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600'],
+    images: [
+      'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+      'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600',
+    ],
     securityDeposit: 499,
     tenureOptions: [
       { months: 3,  monthlyRent: 199 },
